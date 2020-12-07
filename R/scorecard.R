@@ -12,10 +12,6 @@ str(germancredit)
 names(germancredit)
 View(germancredit)
 
-germancredit <- readxl::read_xlsx("D:/starcore/response_retail_v2.xlsx", sheet = 2)
-germancredit <- germancredit[-1]
-names(germancredit)[ncol(germancredit)] <- "creditability"
-
 # Filter variable via missing rate, IV, identical value rate (optional) -----
 dt_sel <- var_filter(dt = germancredit, 
                      y = "creditability", 

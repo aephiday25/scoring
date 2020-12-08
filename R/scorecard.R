@@ -4,7 +4,7 @@
 # Load scorecard package -----
 library(scorecard)
 ## Help -----
-help("scorecard", package = "scorecard")
+help(topic = "scorecard", package = "scorecard")
 
 # Load example data -----
 data("germancredit")

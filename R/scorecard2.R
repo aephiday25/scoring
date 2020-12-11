@@ -25,6 +25,7 @@ dt_sel <- var_filter(dt = cr_default,
 names(cr_default)[!names(cr_default) %in% names(dt_sel$dt)]
 View(dt_sel$rm)
 dt_sel <- dt_sel$dt
+View(dt_sel)
 
 # Split data -----
 dt_split <- split_df(dt = dt_sel, 
@@ -45,7 +46,7 @@ dim(test)
 bins <- woebin(dt_sel, y = "Status")
 bins
 ## Plot bins -----
-woebin_plot(bins)
+woebin_plot(bins$Savings)
 
 # Apply woe to train data -----
 train_woe <- woebin_ply(train, bins = bins)
